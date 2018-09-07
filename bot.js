@@ -73,6 +73,16 @@ msg.channel.send(`**Bot InviteURL : ** https://discordapp.com/oauth2/authorize?c
 });
 
 
+
+client.on('message', msg => {
+  if(msg.content === 'مين المتنق؟')
+  msg.reply('**أحلــى متنق دا ولا ايه -> Vanieéet  :eggplant:**')
+});
+
+
+
+
+
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "msg")) {
     let i = client.users.size;
