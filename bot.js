@@ -285,6 +285,18 @@ client.on('message', msg => {
 
 
 
+  client.on("guildCreate", guild => {
+client.channels.get("ايدي الشات الي تجي فيه الرساله").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+});
+
+client.on("guildDelete", guild => {
+client.channels.get("ايدي الشات الي تجي فيه الرساله").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+});
+
+
+
+
+
 
 
 client.on('message', async message => {
