@@ -76,7 +76,7 @@ msg.channel.send(`**Bot InviteURL : ** https://discordapp.com/oauth2/authorize?c
 
 client.on('message', msg => {
   if(msg.content === 'مين المتنق؟')
-  msg.reply('**أحلــى متنق دا ولا ايه -> Vanieéet  :eggplant:**')
+  msg.channel.send('**أحلــى متنق دا ولا ايه -> Vanieéet  :eggplant:**')
 });
 
 
