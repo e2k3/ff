@@ -766,7 +766,6 @@ if (message.content.startsWith(prefix + 'setplay')) {
 
 
 });
-(edited)
 
 
 
