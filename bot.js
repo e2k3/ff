@@ -216,27 +216,38 @@ client.on('message', message => {
 
 
 
- client.on('message', message => {
-            if (message.content.startsWith(prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **.bc** ' ,' **لارسال رساله الي جميع من ف السيرفر** ')
-.addField('     **.link+Mentoin**  ' ,' **لجلب رابط البوتات** ')
-.addField('     **.cat** ' , '**لصوره قطط**') 
-.addField('     **.server** ' , '**لمعرفه معلومات عن السيرفر**') 
-.addField('     **.ping** ' ,' ** لمعرفه سويع اتصال البوت**')
-.addField('     **.SsOoNn** ' , '**هذي لعبة الكت تويت**')
-.addField('     **.هل تعلم ** ' ,' **  لعبة هل تعلم  ** ')
-.addField('     **.invites** ' ,' **  لمعرفه لديك كم دعوه  ** ')
-.addField('     **.bans** ' ,' **لمعرفه كم شخص متبند** ')
-.addField('     **رابط** ' ,' **لجلب رابط السيرفر** ')
-.addField('     **.clear** ' ,' **لمسح الشات** ')
-.addField('     **.avatar** ' ,' **لجلب صوره احد** ')
-.addField('     **.id** ' ,' **لمعرفه معلومات عنك** ')
-.setColor('#7d2dbe')
-  message.channel.sendEmbed(embed);
-    }
-});
+    client.on('message' , message => {
+    if (message.content === '.help') {
+             let embed = new Discord.RichEmbed()
+
+          .setThumbnail(message.author.avatarURL)
+          .addField("**🌐 الأوامر العامه**","** **")
+          .addField("**.avatar**","**عرض صورتك الشخصية**")
+          .addField("**.server**","**عرض جميع معلومات السيرفر**")
+           .addField("**.id**","**عرض معلومات عنك**")
+       .addField("**!help**","**ارسال هذه الأوامر للعضو في الخاص**")
+       .addField("**.Bping**","** عرض سرعة اتصال البوت**")
+       .addField("**.cat**","** *لصوره قطط**")
+       .addField("**هل تعلم**","** لعبه هل تعلم**")
+       .addField("**.cat**","** لصوره قطط**")
+       .addField("**.clear - مسح**","** *لمسح الشات**")
+       .addField("**.bc**","** لارسال رساله الي جميع من ف السيرفر**")
+    .setColor('RANDOM')
+      message.author.sendEmbed(embed);
+        }
+    });
+
+
+    client.on('message', message => {
+                if (message.content.startsWith(".help")) {
+         let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .addField('     Help ' ,' تم ارسال الاوامر الي الخاص ✉  ')
+    .setColor('#B101FC')
+      message.channel.sendEmbed(embed);
+        }
+    });
+
 
 
 
