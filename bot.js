@@ -279,13 +279,16 @@ client.on('message', message => {
           .addField("**.avatar**","**عرض صورتك الشخصية**")
           .addField("**.server**","**عرض جميع معلومات السيرفر**")
            .addField("**.id**","**عرض معلومات عنك**")
-       .addField("**!help**","**ارسال هذه الأوامر للعضو في الخاص**")
+       .addField("**.help**","**ارسال هذه الأوامر للعضو في الخاص**")
        .addField("**.Bping**","** عرض سرعة اتصال البوت**")
        .addField("**.cat**","** *لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
        .addField("**.cat**","** لصوره قطط**")
        .addField("**.clear - مسح**","** *لمسح الشات**")
        .addField("**.bc**","** لارسال رساله الي جميع من ف السيرفر**")
+.addField("**:tools:  الأوامر الادرايه**","** **")
+           .addField("**.mute**","**لعطاء شخص ميوت**")
+           .addField("**.unmute**","**لفك الميوت عن احد**")
     .setColor('RANDOM')
       message.author.sendEmbed(embed);
         }
