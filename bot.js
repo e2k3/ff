@@ -592,7 +592,7 @@ client.on('voiceStateUpdate', (o,n) => {
     if (o.voiceChannel && !n.voiceChannel) {
         ss-=1
         n.guild.channels.get("487895036424486922").edit({
-            name : "Voice Online : #" + ss+ ",1"
+            name : "Voice Online : #" + ss+ ","
         })
     };
     if (n.voiceChannel && !o.voiceChannel) {
