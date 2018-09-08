@@ -284,6 +284,18 @@ client.on('message', message => {
        .addField("**.cat**","** لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
        .addField("**.cat**","** لصوره قطط**")
+    .setColor('RANDOM')
+      message.author.sendEmbed(embed);
+        }
+    });
+
+
+
+    client.on('message' , message => {
+    if (message.content === '.help') {
+             let embed = new Discord.RichEmbed()
+
+          .setThumbnail(message.author.avatarURL
 .addField("**:tools:  الأوامر الادرايه**","** **")
            .addField("**.mute**","**لعطاء شخص ميوت**")
            .addField("**.unmute**","**لفك الميوت عن احد**")
