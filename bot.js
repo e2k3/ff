@@ -284,11 +284,6 @@ client.on('message', message => {
        .addField("**.cat**","** لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
        .addField("**.cat**","** لصوره قطط**")
-.addField("**:tools:  الأوامر الادرايه**","** **")
-           .addField("**.mute**","**لعطاء شخص ميوت**")
-           .addField("**.unmute**","**لفك الميوت عن احد**")
-       .addField("**.clear - مسح**","** لمسح الشات**")
-       .addField("**.bc**","** لارسال رساله الي جميع من ف السيرفر**")
     .setColor('RANDOM')
       message.author.sendEmbed(embed);
         }
