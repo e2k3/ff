@@ -112,23 +112,77 @@ client.on('message', message => {
 });
 
 
-
-client.on("message", message => {
-  if(message.content.startsWith(prefix + "server")) {
-      if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("**ليس لديك البرمشن المطلوب لاستخدام هذا الامر ❌**");
-      const embed = new Discord.RichEmbed()
-      .setAuthor(message.guild.name, message.guild.iconURL)
-      .setColor("RANDOM")
-
-.addField('**عدد اعضاء السيرفر 👤 **' , `${message.guild.memberCount}`)
-.addField('**اونر السيرفر 👑**' , `${message.guild.owner.user.username}`)
-.addField(`**الرومات :scroll: **`,true)
-.addField(`# الكتابية`, `${message.guild.channels.filter(m => m.type === 'text').size}`)
-.addField( `:loud_sound: الصوتية`,`${message.guild.channels.filter(m => m.type === 'voice').size}`)
-.addField(`**عدد الرتب**:briefcase:`,`${message.guild.roles.size}`)
-      message.channel.send({embed:embed})
+client.on('message', function(msg) {
+  if(msg.content.startsWith (prefix + 'server')) {
+    if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setThumbnail(msg.guild.iconURL)
+    .addField(':globe_with_meridians: **اسم السيرفر : **' , `**[ ${msg.guild.name} ]**`,true)
+    .addField(':earth_africa: ** موقع السيرفر :**',`**[ ${msg.guild.region} ]**`,true)
+    .addField(':military_medal:** الرتب :**',`**[ ${msg.guild.roles.size} ]**`,true)
+    .addField(':bust_in_silhouette:** عدد الاعضاء :**',`**[ ${msg.guild.memberCount} ]**`,true)
+    .addField(':white_check_mark:** عدد الاعضاء الاونلاين :**',`**[ ${msg.guild.members.filter(m=>m.presence.status == 'online').size} ]**`,true)
+    .addField(':pencil:** الرومات الكتابية :**',`**[ ${msg.guild.channels.filter(m => m.type === 'text').size} ]**`,true)
+    .addField(':loud_sound:** رومات الصوت :**',`**[ ${msg.guild.channels.filter(m => m.type === 'voice').size} ]**`,true)
+    .addField(':crown:** صاحب السيرفر :**',`**[ ${msg.guild.owner} ]**`,true)
+    .addField(':id:** ايدي السيرفر :**',`**[ ${msg.guild.id} ]**`,true)
+    .addField(':date:** تم عمل السيرفر في : **',msg.guild.createdAt.toLocaleString())
+    msg.channel.send({embed:embed});
   }
 });
+
+
+client.on('message', message => {
+var args = message.content.split(" ").slice(1);
+if(message.content.startsWith(prefix + 'id')) {
+var year = message.author.createdAt.getFullYear()
+var month = message.author.createdAt.getMonth()
+var day = message.author.createdAt.getDate()
+var men = message.mentions.users.first();
+let args = message.content.split(' ').slice(1).join(' ');
+if (args == '') {
+var z = message.author;
+}else {
+var z = message.mentions.users.first();
+}
+
+let d = z.createdAt;
+let n = d.toLocaleString();
+let x;
+let y;
+
+if (z.presence.game !== null) {
+y = `${z.presence.game.name}`;
+} else {
+y = "No Playing... |💤.";
+}
+if (z.bot) {
+var w = 'بوت';
+}else {
+var w = 'عضو';
+}
+let embed = new Discord.RichEmbed()// By Vaniet. (VanietSystem.)
+.setColor("RANDOM")// By Vaniet. (VanietSystem.)
+.addField('**🔱| الاسم:**',`**<@` + `${z.id}` + `>**`, true)// By Vaniet. (VanietSystem.)
+.addField('**📠 | الايدي الخاص به**:', "**"+ `${z.id}` +"**",true)// By Vaniet. (VanietSystem.)
+.addField('**🎮 | اللعبة الحالية:**','**'+y+'**' , true)// By Vaniet. (VanietSystem.)
+.addField('**🤖| نوع حسابه:**',"**"+ w + "**",true)// By Vaniet. (VanietSystem.)
+.addField('**📛| التاق الأساسي الخاص به :**',"**#" +  `${z.discriminator}**`,true)// By Vaniet. (VanietSystem.)
+.addField('** تاريخ انشاء حسابه | 📆 :** ' ,year + "-"+ month +"-"+ day)// By Vaniet. (VanietSystem.)
+.addField("**تاريخ حضوره في السيرفر | ⌚   :**", message.member.joinedAt.toLocaleString())// By Vaniet. (VanietSystem.)
+.setThumbnail(`${z.avatarURL}`)// By Vaniet. (VanietSystem.)
+.setFooter(message.author.username, message.author.avatarURL)// By Vaniet. (VanietSystem.)
+
+message.channel.send({embed});// By Vaniet. (VanietSystem.)
+  if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);// By Vaniet. (VanietSystem.)
+
+
+}
+
+});
+
+
 
 
 client.on('guildMemberAdd', (member) => {
