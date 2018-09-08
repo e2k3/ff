@@ -841,6 +841,31 @@ client.on ("guildMemberRemove", member => {
 
 
 
+client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='.member')  /// By KillerFox_ حقوق الفا كودز
+      var IzRo = new Discord.RichEmbed() /// By KillerFox_ حقوق الفا كودز
+      .setThumbnail(message.author.avatarURL)  /// By KillerFox_ حقوق الفا كودز
+      .setFooter(message.author.username, message.author.avatarURL) /// الفا كودز
+      .setTitle('🌷| Members info') /// By KillerFox_ حقوق الفا كودز
+      .addBlankField(true)
+      .addField('📗| Online',  /// By KillerFox_ حقوق الفا كودز
+      `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)  /// By KillerFox_ حقوق الفا كودز  /// By KillerFox_ حقوق الفا كودز
+      .addField('📕| DND',`${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`)  /// By KillerFox_ حقوق الفا كودز
+      .addField('📙| Idle',`${message.guild.members.filter(m=>m.presence.status == 'idle').size}`) /// By KillerFox_ حقوق الفا كودز
+      .addField('📓| Offline',`${message.guild.members.filter(m=>m.presence.status == 'offline').size}`) /// By KillerFox_ حقوق الفا كودز
+      .addField('➡| Server Members',`${message.guild.memberCount}`) /// By KillerFox_ حقوق الفا كودز
+      message.channel.send(IzRo);
+    
+    });
+
+
+
+
+
+
+
+
 
 
 
