@@ -299,7 +299,7 @@ client.on('message', message => {
                 if (message.content.startsWith(".help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .addField('     Help ' ,' تم ارسال الاوامر الي الخاص ✉  ')
+    .addField('     Help ' ,' روح شيك خاصك ي بطل  ✉  ')
     .setColor('#B101FC')
       message.channel.sendEmbed(embed);
         }
