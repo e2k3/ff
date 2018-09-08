@@ -284,18 +284,6 @@ client.on('message', message => {
        .addField("**.cat**","** لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
        .addField("**.cat**","** لصوره قطط**")
-    .setColor('RANDOM')
-      message.author.sendEmbed(embed);
-        }
-    });
-
-
-
-    client.on('message' , message => {
-    if (message.content === '.help') {
-             let embed = new Discord.RichEmbed()
-
-          .setThumbnail(message.author.avatarURL
 .addField("**:tools:  الأوامر الادرايه**","** **")
            .addField("**.mute**","**لعطاء شخص ميوت**")
            .addField("**.unmute**","**لفك الميوت عن احد**")
@@ -316,6 +304,41 @@ client.on('message', message => {
       message.channel.sendEmbed(embed);
         }
     });
+
+
+
+
+
+
+
+
+    client.on('message' , message => {
+    if (message.content === '.help') {
+             let embed = new Discord.RichEmbed()
+
+          .setThumbnail(message.author.avatarURL)
+.addField("**:tools:  الأوامر الادرايه**","** **")
+           .addField("**.mute**","**لعطاء شخص ميوت**")
+           .addField("**.unmute**","**لفك الميوت عن احد**")
+       .addField("**.clear - مسح**","** لمسح الشات**")
+       .addField("**.bc**","** لارسال رساله الي جميع من ف السيرفر**")
+    .setColor('RANDOM')
+      message.author.sendEmbed(embed);
+        }
+    });
+
+
+    client.on('message', message => {
+                if (message.content.startsWith(".help")) {
+         let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .addField('     Help ' ,' روح شيك خاصك ي بطل  ✉  ')
+    .setColor('#B101FC')
+      message.channel.sendEmbed(embed);
+        }
+    });
+
+
 
 
 
