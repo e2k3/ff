@@ -934,7 +934,7 @@ client.on('message', msg => {
 .addField(' الاعضاء👥 ',` [${client.users.size}] `)
 .addField('الرومات📚 ',`[${client.channels.size}]`) 
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`اسمك هنا`)
+.addField('مصمم  + صاحب البوت ',`@!           ًe2k , .roýale💜#8218 `)
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
