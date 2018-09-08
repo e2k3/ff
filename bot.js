@@ -329,7 +329,7 @@ client.on('message', message => {
 
 
     client.on('message', message => {
-                if (message.content.startsWith(".help")) {
+                if (message.content.startsWith("kosamkafasdgj,.,.,.help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
     .addField('     Help ' ,' روح شيك خاصك ي بطل  ✉  ')
