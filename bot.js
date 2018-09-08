@@ -863,6 +863,11 @@ client.on('message', message => {
 
 
 
+client.on('message', msg => {
+  if(msg.content === '.')
+  msg.channel.send('**** Welcome To __Speical Community__ :champagne_glass: . ****')
+});
+
 
 
 
