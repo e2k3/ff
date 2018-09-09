@@ -673,53 +673,6 @@ message.channel.send('**تم الارسال في الخاص**');
 
 
 
-var ss = 0;
-
-client.on('voiceStateUpdate', (o,n) => {
-    if (o.voiceChannel && !n.voiceChannel) {
-        ss-=1
-        n.guild.channels.get("487895036424486922").edit({
-            name : "Voice Online : #" + ss+ ","
-        })
-    };
-    if (n.voiceChannel && !o.voiceChannel) {
-        ss+=1
-        n.guild.channels.get("487895036424486922").edit({
-            name : "Voice Online : #" + ss+ ","
-        })
-    }
-})
-client.on("ready", () => {
-    client.guilds.get("470153000007237643").members.forEach(m => {
-        if (m.voiceChannel) {
-            ss+=1
-        };
-        client.channels.get("487895036424486922").edit({
-            name : "Voice Online : #" + ss+ ","
-        })
-    });
-    ;
-});
-
-
-
-
-
-client.on('voiceStateUpdate', (codes, ReBeL) => {
-  if(ReBeL.voiceChannelID !== "487185046068002816") return console.log("أيرور.");
-  ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
-      rebeeel.setParent("487185001285156881");
-  ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
-    console.log("تــــــم .");
-    let scan = setInterval(()=>{
-  if(!ReBeL.voiceChannel) {
-    rebeeel.delete();
-  }
-    }, 1700);
-  });
-  });
-  });
-  
 
   client.on('message', message => {
     if(message.content.includes('discord.gg')){
