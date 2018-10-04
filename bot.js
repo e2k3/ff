@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @e2k3 Sign out
-0
-0 0 e2k3/ff
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-ff/bot.js
-b300c9d  2 days ago
-@e2k3 e2k3 Update bot.js
-     
-935 lines (708 sloc)  33.8 KB
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = ".";
