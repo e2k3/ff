@@ -283,7 +283,8 @@ client.on('message', message => {
        .addField("**.Bping**","** عرض سرعة اتصال البوت**")
        .addField("**.cat**","** لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
-       .addField("**.cat**","** لصوره قطط**")
+       .addField("**.incites**","** لمعرفه عدد دعواتك**")
+       .addField("**رابط**","** لجب رابط السيرفر**")
     .setColor('RANDOM')
       message.author.sendEmbed(embed);
         }
@@ -294,7 +295,7 @@ client.on('message', message => {
                 if (message.content.startsWith(".help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .addField('     Help ' ,' روح شيك خاصك ي بطل  ✉  ')
+    .addField('     Help ' ,' روح شيك خاصك  ✉  ')
     .setColor('#B101FC')
       message.channel.sendEmbed(embed);
         }
@@ -327,7 +328,7 @@ client.on('message', message => {
                 if (message.content.startsWith("kosamkafasdgj,.,.,.help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .addField('     Help ' ,' روح شيك خاصك ي بطل  ✉  ')
+    .addField('     Help ' ,' روح شيك خاصك  ✉  ')
     .setColor('#B101FC')
       message.channel.sendEmbed(embed);
         }
@@ -567,29 +568,10 @@ client.on('message', message => {
 });
 
 
-client.on("message", msg => {
-  if(msg.content === '.' + "id") {
-      const embed = new Discord.RichEmbed();
-  embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
-          .addField("🆔| الاي دي :", `${msg.author.id}`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField('📛| الحالة :', `${msg.author.presence.status.toUpperCase()}`, true)
-          .addField('🎲| بلاينج :', `${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name}`, true)
-          .addField('🏅| الرتب : ', `${msg.member.roles.filter(r => r.name).size}`, true)
-          .addField('📅| تم الانضمام للديسكورد في :', `${msg.createdAt}`,true)
-          .addField('🤖| هل هو بوت ؟', `${msg.author.bot.toString().toUpperCase()}`, true);
-      msg.channel.send({embed: embed})
-  }
-});
-
 
 
 client.on('message', msg => {
-  if(msg.content === '.SsOoNn')
+  if(msg.content === '.ce')
   msg.reply('**هذا الامر سوف يكون متاح قريبا جدا انتظرو!**')
 });
   
@@ -656,7 +638,7 @@ message.author.sendMessage(`
 __~~Speical System .~~__
 ╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱
 ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ 
-__created By__: !        ًe2k , .roýale💜#8218 
+__created By__: @!                     - e2k.k ♪#4211 
 Server Support : https://discord.gg/jYdSQr
 bot link :   https://discordapp.com/oauth2/authorize?client_id=487160671704973312&scope=bot&permissions=384064
 `);
@@ -917,7 +899,7 @@ client.on('message', msg => {
 .addField(' الاعضاء👥 ',` [${client.users.size}] `)
 .addField('الرومات📚 ',`[${client.channels.size}]`) 
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`@!           ًe2k , .roýale💜#8218 `)
+.addField('مصمم  + صاحب البوت ',`@!                     - e2k.k ♪#4211  `)
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
