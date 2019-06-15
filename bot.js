@@ -76,7 +76,7 @@ msg.channel.send(`**Bot InviteURL : ** https://discordapp.com/oauth2/authorize?c
 
 client.on('message', msg => {
   if(msg.content === '.buy')
-  msg.channel.send('**لشراء رتبه بائع قم بكاتبه الامر التالي #credits @!                     - e2k.k ♪#4211 70000**')
+  msg.channel.send('**افتح تكت عن طريقه .new لكي تحصل علي رتبه بائع**')
 });
 
 
@@ -283,7 +283,6 @@ client.on('message', message => {
        .addField("**.Bping**","** عرض سرعة اتصال البوت**")
        .addField("**.cat**","** لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
-       .addField("**.incites**","** لمعرفه عدد دعواتك**")
        .addField("**رابط**","** لجب رابط السيرفر**")
     .setColor('RANDOM')
       message.author.sendEmbed(embed);
