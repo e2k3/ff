@@ -23,7 +23,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : e2k ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Speical4Ever I .help `,"http://twitch.tv/S-F")
+client.user.setGame(`Tomatoe I .help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
@@ -75,8 +75,8 @@ msg.channel.send(`**Bot InviteURL : ** https://discordapp.com/oauth2/authorize?c
 
 
 client.on('message', msg => {
-  if(msg.content === 'مين المتنق؟')
-  msg.channel.send('**أحلــى متنق دا ولا ايه -> Vanieéet  :eggplant:**')
+  if(msg.content === '.buy')
+  msg.channel.send('**لشراء رتبه بائع قم بكاتبه الامر التالي #credits @!                     - e2k.k ♪#4211 70000**')
 });
 
 
